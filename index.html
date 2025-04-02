@@ -15,6 +15,7 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
         }
         h1 {
             color: #2c3e50;
@@ -43,42 +44,115 @@
             background-color: #f8f9fa;
             border-left: 4px solid #3498db;
         }
+        .lang-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .lang-btn {
+            background: #eee;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .lang-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        .lang-zh {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>User Agreement</h1>
-        <div class="last-updated">Last updated: June 2024</div>
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        </div>
         
-        <p>This User Agreement ("Agreement") is a legal agreement between you (referred to as "you" or "user") and TommyStudio, Inc. and its affiliates (referred to as "TommyStudio," "we," "us," or "our") governing your use of TommyStudio's services and products. By using our services and products, you agree to be bound by the terms of this Agreement. If you do not agree to the terms of this Agreement, you may not use our services and products.</p>
+        <h1 class="lang-en">User Agreement</h1>
+        <h1 class="lang-zh" style="display:none">用户协议</h1>
         
-        <h2>1. Acceptance of Terms</h2>
-        <p>By using our services and products, you agree to comply with this Agreement and any additional terms and conditions that may apply to specific services and products. We may modify this Agreement from time to time, and such modifications will be effective upon posting on our website. Your continued use of our services and products after any such modifications indicates your acceptance of the modified Agreement.</p>
+        <div class="last-updated lang-en">Last updated: June 2024</div>
+        <div class="last-updated lang-zh" style="display:none">最后更新：2024年6月</div>
         
-        <h2>2. User Conduct</h2>
-        <p>You agree to use our services and products in compliance with all applicable laws and regulations. You may not use our services and products for any unlawful or unauthorized purpose, and you may not engage in any activity that interferes with or disrupts our services and products.</p>
+        <div class="lang-en">
+            <p>This User Agreement ("Agreement") is a legal agreement between you (referred to as "you" or "user") and TommyStudio, Inc. and its affiliates (referred to as "TommyStudio," "we," "us," or "our") governing your use of TommyStudio's services and products. By using our services and products, you agree to be bound by the terms of this Agreement. If you do not agree to the terms of this Agreement, you may not use our services and products.</p>
+            
+            <h2>1. Acceptance of Terms</h2>
+            <p>By using our services and products, you agree to comply with this Agreement and any additional terms and conditions that may apply to specific services and products. We may modify this Agreement from time to time, and such modifications will be effective upon posting on our website. Your continued use of our services and products after any such modifications indicates your acceptance of the modified Agreement.</p>
+            
+            <h2>2. User Conduct</h2>
+            <p>You agree to use our services and products in compliance with all applicable laws and regulations. You may not use our services and products for any unlawful or unauthorized purpose, and you may not engage in any activity that interferes with or disrupts our services and products.</p>
+            
+            <h2>3. Intellectual Property Rights</h2>
+            <p>TommyStudio and its licensors own all intellectual property rights in our services and products, including but not limited to software, content, trademarks, and logos. You may not use our intellectual property rights without our prior written consent.</p>
+            
+            <h2>4. Privacy</h2>
+            <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and disclose your personal information. By using our services and products, you agree to the collection, use, and disclosure of your personal information as described in our Privacy Policy.</p>
+            
+            <h2>5. Limitation of Liability</h2>
+            <p>To the extent permitted by law, TommyStudio and its affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services and products.</p>
+            
+            <h2>6. Termination</h2>
+            <p>We may terminate or suspend your access to our services and products at any time, with or without cause, and with or without notice. Upon termination, your right to use our services and products will immediately cease.</p>
+            
+            <h2>7. Governing Law</h2>
+            <p>This Agreement is governed by the laws of the People's Republic of China. Any dispute arising out of or in connection with this Agreement will be subject to the exclusive jurisdiction of the courts located in Beijing, China.</p>
+            
+            <h2>8. General</h2>
+            <p>This Agreement constitutes the entire agreement between you and TommyStudio regarding your use of our services and products. If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions will continue to be valid and enforceable.</p>
+        </div>
         
-        <h2>3. Intellectual Property Rights</h2>
-        <p>TommyStudio and its licensors own all intellectual property rights in our services and products, including but not limited to software, content, trademarks, and logos. You may not use our intellectual property rights without our prior written consent.</p>
-        
-        <h2>4. Privacy</h2>
-        <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and disclose your personal information. By using our services and products, you agree to the collection, use, and disclosure of your personal information as described in our Privacy Policy.</p>
-        
-        <h2>5. Limitation of Liability</h2>
-        <p>To the extent permitted by law, TommyStudio and its affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services and products.</p>
-        
-        <h2>6. Termination</h2>
-        <p>We may terminate or suspend your access to our services and products at any time, with or without cause, and with or without notice. Upon termination, your right to use our services and products will immediately cease.</p>
-        
-        <h2>7. Governing Law</h2>
-        <p>This Agreement is governed by the laws of the People's Republic of China. Any dispute arising out of or in connection with this Agreement will be subject to the exclusive jurisdiction of the courts located in Beijing, China.</p>
-        
-        <h2>8. General</h2>
-        <p>This Agreement constitutes the entire agreement between you and TommyStudio regarding your use of our services and products. If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions will continue to be valid and enforceable.</p>
+        <div class="lang-zh" style="display:none">
+            <p>本用户协议（以下简称"协议"）是您（以下简称"用户"或"您"）与TommyStudio公司及其关联公司（以下简称"TommyStudio"、"我们"或"我方"）之间的法律协议，规范您对TommyStudio服务和产品的使用。通过使用我们的服务和产品，您同意受本协议条款的约束。如果您不同意本协议的条款，则不得使用我们的服务和产品。</p>
+            
+            <h2>1. 条款接受</h2>
+            <p>通过使用我们的服务和产品，您同意遵守本协议以及可能适用于特定服务和产品的任何附加条款和条件。我们可能会不时修改本协议，此类修改将在我们的网站上发布后生效。您在任何此类修改后继续使用我们的服务和产品即表示您接受修改后的协议。</p>
+            
+            <h2>2. 用户行为</h2>
+            <p>您同意在使用我们的服务和产品时遵守所有适用的法律法规。您不得将我们的服务和产品用于任何非法或未经授权的目的，也不得从事任何干扰或破坏我们服务和产品的活动。</p>
+            
+            <h2>3. 知识产权</h2>
+            <p>TommyStudio及其许可方拥有我们服务和产品中的所有知识产权，包括但不限于软件、内容、商标和徽标。未经我们事先书面同意，您不得使用我们的知识产权。</p>
+            
+            <h2>4. 隐私</h2>
+            <p>您的隐私对我们很重要。我们的隐私政策说明了我们如何收集、使用和披露您的个人信息。通过使用我们的服务和产品，您同意按照我们的隐私政策中所述的方式收集、使用和披露您的个人信息。</p>
+            
+            <h2>5. 责任限制</h2>
+            <p>在法律允许的最大范围内，TommyStudio及其关联公司不对任何间接、附带、特殊、后果性或惩罚性损害，或任何利润或收入的损失（无论是直接还是间接产生的），或任何数据、使用、商誉或其他无形损失承担责任，这些损失可能因您使用我们的服务和产品而产生。</p>
+            
+            <h2>6. 终止</h2>
+            <p>我们可随时终止或暂停您对我们服务和产品的访问，无论是否有原因，也无论是否通知。终止后，您使用我们服务和产品的权利将立即停止。</p>
+            
+            <h2>7. 适用法律</h2>
+            <p>本协议受中华人民共和国法律管辖。因本协议引起的或与本协议有关的任何争议，将提交中国北京法院专属管辖。</p>
+            
+            <h2>8. 一般条款</h2>
+            <p>本协议构成您与TommyStudio之间关于使用我们服务和产品的完整协议。如果本协议的任何条款被认定为无效或不可执行，其余条款仍将继续有效并可执行。</p>
+        </div>
         
         <div class="acceptance">
-            <p>By using our services and products, you acknowledge that you have read, understood, and agree to be bound by this Agreement. If you have any questions about this Agreement, please contact us.</p>
+            <p class="lang-en">By using our services and products, you acknowledge that you have read, understood, and agree to be bound by this Agreement. If you have any questions about this Agreement, please contact us.</p>
+            <p class="lang-zh" style="display:none">通过使用我们的服务和产品，您确认已阅读、理解并同意受本协议约束。如对本协议有任何疑问，请联系我们。</p>
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            // 切换按钮样式
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(lang === 'zh' ? '中文' : 'English'));
+            });
+
+            // 切换内容显示
+            document.querySelectorAll('.lang-zh, .lang-en').forEach(el => {
+                el.style.display = el.classList.contains('lang-' + lang) ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>
